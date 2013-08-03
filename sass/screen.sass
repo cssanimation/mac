@@ -7,31 +7,63 @@
   display: none
 .csstransforms3d .stage
   display: block
-
-.fallback
-  display: block
-  padding: 130px 0 0
-  iframe
-    display: block
-    margin: 0 auto
-  p 
-    text-align: center
-    letter-spacing: 1
-    line-height: 1.5em
-    padding: 20px
-.csstransforms3d .fallback
+.fallback-stage
+  width: 100%
+  height: 600px
+  background: url(../images/fallback.png) no-repeat center
+.csstransforms3d .fallback-stage
   display: none
 
+
+
 body
-  background-color: #efe8dd
+  background-color: #000
+  font-size: 32px
 
 .stage
-  width: 800px
-  height: 600px
-  +perspective()
+  width: 14em
+  height: 10em
+  margin: 100px auto
+  position: relative
+  +perspective(1600px)
+  +perspective-origin(50% -240px)
 
-.desk
-  width: 2000px
-  height: 800px
+.positioning
+  +transform(rotateY(-20deg))
+  +transform-style(preserve-3d)
+
+/* 13.6 x 9.6 x 10.9
+
+.mac
+  width: 14em
+  height: 10em
+
+  figure
+    display: block
+    background-color: beige
+    position: absolute
+    @include backface-visibility(hidden)
+    opacity: 0.9
+
+  .front
+    height: 13.6em
+    width: 9.6em
+    +transform(translateZ(5.45em))
+
+  .back
+    height: 13.6em
+    width: 9.6em
+    +transform(translateZ(-5.45em))
+
+  .top
+    height: 10.9em
+    width: 9.6em
+    +transform(rotateX(90deg) translateZ(5.45em))
+
+  .bottom
+    height: 10.9em
+    width: 9.6em
+    +transform(rotateX(-90deg) translateZ(5.45em))
+
 
  
