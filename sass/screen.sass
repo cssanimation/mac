@@ -1,0 +1,37 @@
+@import compass/reset
+@import compass/css3
+@import mixins
+
+/* Fallback for older browsers */
+.stage
+  display: none
+.csstransforms3d .stage
+  display: block
+
+.fallback
+  display: block
+  padding: 130px 0 0
+  iframe
+    display: block
+    margin: 0 auto
+  p 
+    text-align: center
+    letter-spacing: 1
+    line-height: 1.5em
+    padding: 20px
+.csstransforms3d .fallback
+  display: none
+
+body
+  background-color: #efe8dd
+
+.stage
+  width: 800px
+  height: 600px
+  +perspective()
+
+.desk
+  width: 2000px
+  height: 800px
+
+ 
