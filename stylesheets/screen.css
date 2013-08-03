@@ -131,11 +131,21 @@ body {
     -ms-transform: rotateX(90deg) translateZ(5.45em);
     -o-transform: rotateX(90deg) translateZ(5.45em);
     transform: rotateX(90deg) translateZ(5.45em); }
-  .mac .bottom {
-    height: 10.9em;
-    width: 9.6em;
-    -webkit-transform: rotateX(-90deg) translateZ(5.45em);
-    -moz-transform: rotateX(-90deg) translateZ(5.45em);
-    -ms-transform: rotateX(-90deg) translateZ(5.45em);
-    -o-transform: rotateX(-90deg) translateZ(5.45em);
-    transform: rotateX(-90deg) translateZ(5.45em); }
+  .mac .left {
+    height: 13.6em;
+    width: 10.9em;
+    background: red;
+    -webkit-transform: rotateY(-90deg) translateZ(4.15em);
+    -moz-transform: rotateY(-90deg) translateZ(4.15em);
+    -ms-transform: rotateY(-90deg) translateZ(4.15em);
+    -o-transform: rotateY(-90deg) translateZ(4.15em);
+    transform: rotateY(-90deg) translateZ(4.15em); }
+  .mac .right {
+    height: 13.6em;
+    width: 10.9em;
+    background: red;
+    -webkit-transform: rotateY(90deg) translateZ(4.15em);
+    -moz-transform: rotateY(90deg) translateZ(4.15em);
+    -ms-transform: rotateY(90deg) translateZ(4.15em);
+    -o-transform: rotateY(90deg) translateZ(4.15em);
+    transform: rotateY(90deg) translateZ(4.15em); }
