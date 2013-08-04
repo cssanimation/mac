@@ -98,11 +98,11 @@ body {
   -o-transform-style: preserve-3d;
   transform-style: preserve-3d; }
   .positioning.animated {
-    -webkit-animation: back-and-forth 4s ease-out infinite;
-    -moz-animation: back-and-forth 4s ease-out infinite;
-    -o-animation: back-and-forth 4s ease-out infinite;
-    -ms-animation: back-and-forth 4s ease-out infinite;
-    animation: back-and-forth 4s ease-out infinite; }
+    -webkit-animation: back-and-forth 14s ease-in-out infinite;
+    -moz-animation: back-and-forth 14s ease-in-out infinite;
+    -o-animation: back-and-forth 14s ease-in-out infinite;
+    -ms-animation: back-and-forth 14s ease-in-out infinite;
+    animation: back-and-forth 14s ease-in-out infinite; }
   .positioning.two {
     -webkit-transform: translateX(14em) translateZ(-10em) rotateY(20deg);
     -moz-transform: translateX(14em) translateZ(-10em) rotateY(20deg);
@@ -201,31 +201,29 @@ body {
       .mac .front .screen-container .screen {
         display: block;
         position: absolute;
-        left: 0.6em;
-        top: 0;
+        left: 0.25em;
+        top: 0.25em;
         background: #657374;
-        border: 0.5em solid #657374;
-        width: 512px;
-        height: 372px;
-        -webkit-transform: scale(0.43) translate3d(-11.6em, -7.2em, 0);
-        -moz-transform: scale(0.43) translate3d(-11.6em, -7.2em, 0);
-        -ms-transform: scale(0.43) translate3d(-11.6em, -7.2em, 0);
-        -o-transform: scale(0.43) translate3d(-11.6em, -7.2em, 0);
-        transform: scale(0.43) translate3d(-11.6em, -7.2em, 0);
-        border-radius: 0.7em;
+        border: 0.25em solid #657374;
+        width: 6.25em;
+        height: 4.75em;
+        border-radius: 0.25em;
         overflow: hidden; }
         .mac .front .screen-container .screen img {
-          padding-top: 0.4em; }
-        .mac .front .screen-container .screen:after {
-          content: "";
-          display: block;
           width: 100%;
           height: 100%;
-          background: -webkit-gradient(linear, 100% 0%, 0% 100%, color-stop(0%, rgba(255, 255, 255, 0.3)), color-stop(50%, rgba(255, 255, 255, 0.3)), color-stop(50%, transparent), color-stop(100%, transparent));
-          background: -webkit-linear-gradient(top right, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3) 50%, transparent 50%, transparent);
-          background: -moz-linear-gradient(top right, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3) 50%, transparent 50%, transparent);
-          background: -o-linear-gradient(top right, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3) 50%, transparent 50%, transparent);
-          background: linear-gradient(top right, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3) 50%, transparent 50%, transparent); }
+          border-radius: 0.1em; }
+      .mac .front .screen-container .sheen {
+        display: block;
+        position: absolute;
+        top: 0;
+        background: -webkit-gradient(linear, 100% 0%, 0% 100%, color-stop(0%, rgba(255, 255, 255, 0.03)), color-stop(50%, rgba(255, 255, 255, 0.06)), color-stop(50%, transparent), color-stop(100%, transparent));
+        background: -webkit-linear-gradient(top right, rgba(255, 255, 255, 0.03), rgba(255, 255, 255, 0.06) 50%, transparent 50%, transparent);
+        background: -moz-linear-gradient(top right, rgba(255, 255, 255, 0.03), rgba(255, 255, 255, 0.06) 50%, transparent 50%, transparent);
+        background: -o-linear-gradient(top right, rgba(255, 255, 255, 0.03), rgba(255, 255, 255, 0.06) 50%, transparent 50%, transparent);
+        background: linear-gradient(top right, rgba(255, 255, 255, 0.03), rgba(255, 255, 255, 0.06) 50%, transparent 50%, transparent);
+        width: 100%;
+        height: 100%; }
   .mac .back {
     height: 11.5em;
     width: 9.6em;
@@ -423,100 +421,77 @@ body {
 
 @-moz-keyframes back-and-forth {
   0% {
-    -moz-transform: rotateY(0deg);
-    transform: rotateY(0deg); }
-
-  25% {
-    -moz-transform: rotateY(-40deg);
-    transform: rotateY(-40deg); }
-
-  75% {
     -moz-transform: rotateY(40deg);
     transform: rotateY(40deg); }
 
-  100% {
-    -moz-transform: rotateY(0deg);
-    transform: rotateY(0deg); } }
+  40%, 50% {
+    -moz-transform: rotateY(-40deg);
+    transform: rotateY(-40deg); }
+
+  90%, 100% {
+    -moz-transform: rotateY(40deg);
+    transform: rotateY(40deg); } }
 
 @-webkit-keyframes back-and-forth {
   0% {
-    -webkit-transform: rotateY(0deg);
-    transform: rotateY(0deg); }
-
-  25% {
-    -webkit-transform: rotateY(-40deg);
-    transform: rotateY(-40deg); }
-
-  75% {
     -webkit-transform: rotateY(40deg);
     transform: rotateY(40deg); }
 
-  100% {
-    -webkit-transform: rotateY(0deg);
-    transform: rotateY(0deg); } }
+  40%, 50% {
+    -webkit-transform: rotateY(-40deg);
+    transform: rotateY(-40deg); }
+
+  90%, 100% {
+    -webkit-transform: rotateY(40deg);
+    transform: rotateY(40deg); } }
 
 @-o-keyframes back-and-forth {
   0% {
-    -o-transform: rotateY(0deg);
-    transform: rotateY(0deg); }
-
-  25% {
-    -o-transform: rotateY(-40deg);
-    transform: rotateY(-40deg); }
-
-  75% {
     -o-transform: rotateY(40deg);
     transform: rotateY(40deg); }
 
-  100% {
-    -o-transform: rotateY(0deg);
-    transform: rotateY(0deg); } }
-
-@-ms-keyframes back-and-forth {
-  0% {
-    -ms-transform: rotateY(0deg);
-    transform: rotateY(0deg); }
-
-  25% {
-    -ms-transform: rotateY(-40deg);
-    transform: rotateY(-40deg); }
-
-  75% {
-    -ms-transform: rotateY(40deg);
-    transform: rotateY(40deg); }
-
-  100% {
-    -ms-transform: rotateY(0deg);
-    transform: rotateY(0deg); } }
-
-@keyframes back-and-forth {
-  0% {
-    -webkit-transform: rotateY(0deg);
-    -moz-transform: rotateY(0deg);
-    -ms-transform: rotateY(0deg);
-    -o-transform: rotateY(0deg);
-    transform: rotateY(0deg); }
-
-  25% {
-    -webkit-transform: rotateY(-40deg);
-    -moz-transform: rotateY(-40deg);
-    -ms-transform: rotateY(-40deg);
+  40%, 50% {
     -o-transform: rotateY(-40deg);
     transform: rotateY(-40deg); }
 
-  75% {
+  90%, 100% {
+    -o-transform: rotateY(40deg);
+    transform: rotateY(40deg); } }
+
+@-ms-keyframes back-and-forth {
+  0% {
+    -ms-transform: rotateY(40deg);
+    transform: rotateY(40deg); }
+
+  40%, 50% {
+    -ms-transform: rotateY(-40deg);
+    transform: rotateY(-40deg); }
+
+  90%, 100% {
+    -ms-transform: rotateY(40deg);
+    transform: rotateY(40deg); } }
+
+@keyframes back-and-forth {
+  0% {
     -webkit-transform: rotateY(40deg);
     -moz-transform: rotateY(40deg);
     -ms-transform: rotateY(40deg);
     -o-transform: rotateY(40deg);
     transform: rotateY(40deg); }
 
-  100% {
-    -webkit-transform: rotateY(0deg);
-    -moz-transform: rotateY(0deg);
-    -ms-transform: rotateY(0deg);
-    -o-transform: rotateY(0deg);
-    transform: rotateY(0deg); } }
+  40%, 50% {
+    -webkit-transform: rotateY(-40deg);
+    -moz-transform: rotateY(-40deg);
+    -ms-transform: rotateY(-40deg);
+    -o-transform: rotateY(-40deg);
+    transform: rotateY(-40deg); }
+
+  90%, 100% {
+    -webkit-transform: rotateY(40deg);
+    -moz-transform: rotateY(40deg);
+    -ms-transform: rotateY(40deg);
+    -o-transform: rotateY(40deg);
+    transform: rotateY(40deg); } }
 
 @font-face {
   font-family: "apple_garamondregular";

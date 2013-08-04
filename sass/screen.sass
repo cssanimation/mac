@@ -41,7 +41,7 @@ body
   +transform-style(preserve-3d)
 
   &.animated
-    +animation(back-and-forth 4s ease-out infinite)
+    +animation(back-and-forth 14s ease-in-out infinite)
 
   &.two
     +transform(translateX(14em) translateZ(-10em) rotateY(20deg))
@@ -112,25 +112,27 @@ body
       .screen
         display: block
         position: absolute
-        left: 0.6em
-        top: 0
+        left: 0.25em
+        top: 0.25em
         background: #657374
-        border: 0.5em solid #657374
-        width: 512px
-        height: 372px
-        +transform(scale(0.43) translate3d(-11.6em, -7.2em, 0))
-        border-radius: 0.7em
+        border: 0.25em solid #657374
+        width: 6.25em
+        height: 4.75em
+        border-radius: 0.25em
         overflow: hidden
 
         img
-          padding-top: 0.4em
-
-        &:after
-          content: ""
-          display: block
           width: 100%
           height: 100%
-          +background(linear-gradient(top right, rgba(255,255,255,0.3), rgba(255,255,255,0.3) 50%, transparent 50%, transparent))
+          border-radius: 0.1em
+
+      .sheen
+        display: block
+        position: absolute
+        top: 0
+        +background(linear-gradient(top right, rgba(255,255,255,0.03), rgba(255,255,255,0.06) 50%, transparent 50%, transparent))
+        width: 100%
+        height: 100%
 
   .back
     height: 11.5em
@@ -263,13 +265,11 @@ body
 
 @include keyframes(back-and-forth)
   0%
-    @include transform(rotateY(0deg))
-  25%
-    @include transform(rotateY(-40deg))
-  75%
     @include transform(rotateY(40deg))
-  100%
-    @include transform(rotateY(0deg))
+  40%, 50%
+    @include transform(rotateY(-40deg))
+  90%, 100%
+    @include transform(rotateY(40deg))
 
 @font-face
   font-family: 'apple_garamondregular'
