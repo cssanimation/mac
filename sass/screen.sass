@@ -26,11 +26,11 @@ body
   
   position: relative
   +perspective(1600px)
-  +perspective-origin(50% -240px)
+  +perspective-origin(50% 240px)
   +background(linear-gradient(top, #131c2d, #131c2d 40%, #b1b5b8 40%, #eee9e6))
 
 .positioning
-  +transform(rotateY(-10deg))
+  +transform(rotateY(10deg))
   +transform-style(preserve-3d)
   /* +animation(back-and-forth 4s ease-out infinite)
 
@@ -54,49 +54,44 @@ body
     background-color: #d9dbb6
     +transform(rotateX(5deg) translateZ(5.44em))
 
-    .bezel-top
+    span
+      position: absolute
       display: block
+
+    .bezel-top
       border-top: 0.75em solid #e8e6cc 
       border-right: 0.5em solid transparent
       border-left: 0.5em solid transparent
       width: 8.6em
-      +transform(rotateX(5deg))
 
     .bezel-left
-      display: block
       border-top: 0.5em solid #d1d2a9 
       border-right: 0.75em solid transparent
       border-left: 0.75em solid transparent
       width: 10.15em
-      +transform(rotateX(5deg) rotateZ(-90deg) translateX(-4.8em) translateY(-5.55em))
+      +transform(rotateZ(-90deg) translateX(-5.6em) translateY(-5.58em))
 
     .bezel-right
-      display: block
       border-top: 0.5em solid #d1d2a9 
       border-right: 0.75em solid transparent
       border-left: 0.75em solid transparent
-      width: 10.15em
-      +transform(rotateX(5deg) rotateZ(90deg) translateX(4.4em) translateY(-3.55em))
+      width: 10em
+      +transform(rotateZ(90deg) translateX(5.5em) translateY(-3.62em))
 
     .bezel-bottom
-      display: block
       border-top: 0.75em solid #c2c39a 
       border-right: 0.5em solid transparent
       border-left: 0.5em solid transparent
-      width: 8.6em
-      +transform(rotateX(5deg) rotateZ(180deg) translateY(-9.1em))
+      width: 8.65em
+      +transform(rotateZ(180deg) translateY(-10.76em))
 
     .screen-container
-      width: 7em
-      height: 4.5em
+      width: 6.25em
+      height: 4.8em
       background: #d1d2a9
       border-radius: 0.1em
       padding: 0.5em
-      +transform(translate3d(0.75em, -1.5em, 0))
-
-      input
-        position: absolute
-        top: 30px
+      +transform(translate3d(1.15em, -1.5em, 0))
 
       .screen
         display: block
@@ -104,18 +99,15 @@ body
         left: 0.6em
         top: 0
         background: #657374
+        border: 0.5em solid #657374
         width: 512px
-        height: 342px
-        +transform(scale(0.5) translate3d(-8.25em, -4.5em, 0))
+        height: 372px
+        +transform(scale(0.43) translate3d(-11.6em, -7.2em, 0))
         border-radius: 0.7em
         overflow: hidden
 
-      iframe
-        position: absolute
-        left: 20px
-        margin-top: 40px
-        -webkit-filter: invert(10%) hue-rotate(200deg) contrast(120%) grayscale(100%)
-
+        img
+          padding-top: 0.4em
   .back
     height: 11.5em
     width: 9.6em
@@ -164,6 +156,43 @@ body
     width: 10em
     background: #bfc096
     +transform(translateY(10.7em) rotateY(90deg) translateZ(4.6em))
+
+  .logo
+    +transform(translateY(5.5em) translateX(1.25em))
+
+    span.image
+      display: block
+      position: absolute
+      width: 15px
+      height: 18px
+      left: 0
+      background: url(../images/bg/apple.png) no-repeat bottom
+      background-size: 100%
+
+    span.text
+      display: block
+      position: absolute
+      left: 2.5em
+      top: 0.6em
+      width: 10em
+      font-family: "EB Garamond", "Times New Roman", Times, serif
+      font-size: 0.333em
+      color: #555
+      line-height: 0.8em
+
+  .floppy
+    height: 0.2em
+    width: 2.5em
+    +transform(translate3d(4.8em, 5.65em, 0))
+    background: #333
+    border-top: 0.1em solid #c2c39a
+    border-right: 0.5em solid #d1d2a9
+    border-bottom: 0.1em solid #d9dbb6
+    border-left: 0.5em solid #d1d2a9
+    border-radius: 0.25em
+ 
+
+
 
 @include keyframes(back-and-forth)
   0%

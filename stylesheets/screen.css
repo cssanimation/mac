@@ -74,11 +74,11 @@ body {
   -ms-perspective: 1600px;
   -o-perspective: 1600px;
   perspective: 1600px;
-  -webkit-perspective-origin: 50% -240px;
-  -moz-perspective-origin: 50% -240px;
-  -ms-perspective-origin: 50% -240px;
-  -o-perspective-origin: 50% -240px;
-  perspective-origin: 50% -240px;
+  -webkit-perspective-origin: 50% 240px;
+  -moz-perspective-origin: 50% 240px;
+  -ms-perspective-origin: 50% 240px;
+  -o-perspective-origin: 50% 240px;
+  perspective-origin: 50% 240px;
   background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #131c2d), color-stop(40%, #131c2d), color-stop(40%, #b1b5b8), color-stop(100%, #eee9e6));
   background: -webkit-linear-gradient(top, #131c2d, #131c2d 40%, #b1b5b8 40%, #eee9e6);
   background: -moz-linear-gradient(top, #131c2d, #131c2d 40%, #b1b5b8 40%, #eee9e6);
@@ -86,11 +86,11 @@ body {
   background: linear-gradient(top, #131c2d, #131c2d 40%, #b1b5b8 40%, #eee9e6); }
 
 .positioning {
-  -webkit-transform: rotateY(-10deg);
-  -moz-transform: rotateY(-10deg);
-  -ms-transform: rotateY(-10deg);
-  -o-transform: rotateY(-10deg);
-  transform: rotateY(-10deg);
+  -webkit-transform: rotateY(10deg);
+  -moz-transform: rotateY(10deg);
+  -ms-transform: rotateY(10deg);
+  -o-transform: rotateY(10deg);
+  transform: rotateY(10deg);
   -webkit-transform-style: preserve-3d;
   -moz-transform-style: preserve-3d;
   -ms-transform-style: preserve-3d;
@@ -122,84 +122,73 @@ body {
     -ms-transform: rotateX(5deg) translateZ(5.44em);
     -o-transform: rotateX(5deg) translateZ(5.44em);
     transform: rotateX(5deg) translateZ(5.44em); }
+    .mac .front span {
+      position: absolute;
+      display: block; }
     .mac .front .bezel-top {
-      display: block;
       border-top: 0.75em solid #e8e6cc;
       border-right: 0.5em solid transparent;
       border-left: 0.5em solid transparent;
-      width: 8.6em;
-      -webkit-transform: rotateX(5deg);
-      -moz-transform: rotateX(5deg);
-      -ms-transform: rotateX(5deg);
-      -o-transform: rotateX(5deg);
-      transform: rotateX(5deg); }
+      width: 8.6em; }
     .mac .front .bezel-left {
-      display: block;
       border-top: 0.5em solid #d1d2a9;
       border-right: 0.75em solid transparent;
       border-left: 0.75em solid transparent;
       width: 10.15em;
-      -webkit-transform: rotateX(5deg) rotateZ(-90deg) translateX(-4.8em) translateY(-5.55em);
-      -moz-transform: rotateX(5deg) rotateZ(-90deg) translateX(-4.8em) translateY(-5.55em);
-      -ms-transform: rotateX(5deg) rotateZ(-90deg) translateX(-4.8em) translateY(-5.55em);
-      -o-transform: rotateX(5deg) rotateZ(-90deg) translateX(-4.8em) translateY(-5.55em);
-      transform: rotateX(5deg) rotateZ(-90deg) translateX(-4.8em) translateY(-5.55em); }
+      -webkit-transform: rotateZ(-90deg) translateX(-5.6em) translateY(-5.58em);
+      -moz-transform: rotateZ(-90deg) translateX(-5.6em) translateY(-5.58em);
+      -ms-transform: rotateZ(-90deg) translateX(-5.6em) translateY(-5.58em);
+      -o-transform: rotateZ(-90deg) translateX(-5.6em) translateY(-5.58em);
+      transform: rotateZ(-90deg) translateX(-5.6em) translateY(-5.58em); }
     .mac .front .bezel-right {
-      display: block;
       border-top: 0.5em solid #d1d2a9;
       border-right: 0.75em solid transparent;
       border-left: 0.75em solid transparent;
-      width: 10.15em;
-      -webkit-transform: rotateX(5deg) rotateZ(90deg) translateX(4.4em) translateY(-3.55em);
-      -moz-transform: rotateX(5deg) rotateZ(90deg) translateX(4.4em) translateY(-3.55em);
-      -ms-transform: rotateX(5deg) rotateZ(90deg) translateX(4.4em) translateY(-3.55em);
-      -o-transform: rotateX(5deg) rotateZ(90deg) translateX(4.4em) translateY(-3.55em);
-      transform: rotateX(5deg) rotateZ(90deg) translateX(4.4em) translateY(-3.55em); }
+      width: 10em;
+      -webkit-transform: rotateZ(90deg) translateX(5.5em) translateY(-3.62em);
+      -moz-transform: rotateZ(90deg) translateX(5.5em) translateY(-3.62em);
+      -ms-transform: rotateZ(90deg) translateX(5.5em) translateY(-3.62em);
+      -o-transform: rotateZ(90deg) translateX(5.5em) translateY(-3.62em);
+      transform: rotateZ(90deg) translateX(5.5em) translateY(-3.62em); }
     .mac .front .bezel-bottom {
-      display: block;
       border-top: 0.75em solid #c2c39a;
       border-right: 0.5em solid transparent;
       border-left: 0.5em solid transparent;
-      width: 8.6em;
-      -webkit-transform: rotateX(5deg) rotateZ(180deg) translateY(-9.1em);
-      -moz-transform: rotateX(5deg) rotateZ(180deg) translateY(-9.1em);
-      -ms-transform: rotateX(5deg) rotateZ(180deg) translateY(-9.1em);
-      -o-transform: rotateX(5deg) rotateZ(180deg) translateY(-9.1em);
-      transform: rotateX(5deg) rotateZ(180deg) translateY(-9.1em); }
+      width: 8.65em;
+      -webkit-transform: rotateZ(180deg) translateY(-10.76em);
+      -moz-transform: rotateZ(180deg) translateY(-10.76em);
+      -ms-transform: rotateZ(180deg) translateY(-10.76em);
+      -o-transform: rotateZ(180deg) translateY(-10.76em);
+      transform: rotateZ(180deg) translateY(-10.76em); }
     .mac .front .screen-container {
-      width: 7em;
-      height: 4.5em;
+      width: 6.25em;
+      height: 4.8em;
       background: #d1d2a9;
       border-radius: 0.1em;
       padding: 0.5em;
-      -webkit-transform: translate3d(0.75em, -1.5em, 0);
-      -moz-transform: translate3d(0.75em, -1.5em, 0);
-      -ms-transform: translate3d(0.75em, -1.5em, 0);
-      -o-transform: translate3d(0.75em, -1.5em, 0);
-      transform: translate3d(0.75em, -1.5em, 0); }
-      .mac .front .screen-container input {
-        position: absolute;
-        top: 30px; }
+      -webkit-transform: translate3d(1.15em, -1.5em, 0);
+      -moz-transform: translate3d(1.15em, -1.5em, 0);
+      -ms-transform: translate3d(1.15em, -1.5em, 0);
+      -o-transform: translate3d(1.15em, -1.5em, 0);
+      transform: translate3d(1.15em, -1.5em, 0); }
       .mac .front .screen-container .screen {
         display: block;
         position: absolute;
         left: 0.6em;
         top: 0;
         background: #657374;
+        border: 0.5em solid #657374;
         width: 512px;
-        height: 342px;
-        -webkit-transform: scale(0.5) translate3d(-8.25em, -4.5em, 0);
-        -moz-transform: scale(0.5) translate3d(-8.25em, -4.5em, 0);
-        -ms-transform: scale(0.5) translate3d(-8.25em, -4.5em, 0);
-        -o-transform: scale(0.5) translate3d(-8.25em, -4.5em, 0);
-        transform: scale(0.5) translate3d(-8.25em, -4.5em, 0);
+        height: 372px;
+        -webkit-transform: scale(0.43) translate3d(-11.6em, -7.2em, 0);
+        -moz-transform: scale(0.43) translate3d(-11.6em, -7.2em, 0);
+        -ms-transform: scale(0.43) translate3d(-11.6em, -7.2em, 0);
+        -o-transform: scale(0.43) translate3d(-11.6em, -7.2em, 0);
+        transform: scale(0.43) translate3d(-11.6em, -7.2em, 0);
         border-radius: 0.7em;
         overflow: hidden; }
-      .mac .front .screen-container iframe {
-        position: absolute;
-        left: 20px;
-        margin-top: 40px;
-        -webkit-filter: invert(10%) hue-rotate(200deg) contrast(120%) grayscale(100%); }
+        .mac .front .screen-container .screen img {
+          padding-top: 0.4em; }
   .mac .back {
     height: 11.5em;
     width: 9.6em;
@@ -289,6 +278,44 @@ body {
     -ms-transform: translateY(10.7em) rotateY(90deg) translateZ(4.6em);
     -o-transform: translateY(10.7em) rotateY(90deg) translateZ(4.6em);
     transform: translateY(10.7em) rotateY(90deg) translateZ(4.6em); }
+  .mac .logo {
+    -webkit-transform: translateY(5.5em) translateX(1.25em);
+    -moz-transform: translateY(5.5em) translateX(1.25em);
+    -ms-transform: translateY(5.5em) translateX(1.25em);
+    -o-transform: translateY(5.5em) translateX(1.25em);
+    transform: translateY(5.5em) translateX(1.25em); }
+    .mac .logo span.image {
+      display: block;
+      position: absolute;
+      width: 15px;
+      height: 18px;
+      left: 0;
+      background: url(../images/bg/apple.png) no-repeat bottom;
+      background-size: 100%; }
+    .mac .logo span.text {
+      display: block;
+      position: absolute;
+      left: 2.5em;
+      top: 0.6em;
+      width: 10em;
+      font-family: "EB Garamond", "Times New Roman", Times, serif;
+      font-size: 0.333em;
+      color: #555555;
+      line-height: 0.8em; }
+  .mac .floppy {
+    height: 0.2em;
+    width: 2.5em;
+    -webkit-transform: translate3d(4.8em, 5.65em, 0);
+    -moz-transform: translate3d(4.8em, 5.65em, 0);
+    -ms-transform: translate3d(4.8em, 5.65em, 0);
+    -o-transform: translate3d(4.8em, 5.65em, 0);
+    transform: translate3d(4.8em, 5.65em, 0);
+    background: #333333;
+    border-top: 0.1em solid #c2c39a;
+    border-right: 0.5em solid #d1d2a9;
+    border-bottom: 0.1em solid #d9dbb6;
+    border-left: 0.5em solid #d1d2a9;
+    border-radius: 0.25em; }
 
 @-moz-keyframes back-and-forth {
   0% {
