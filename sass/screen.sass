@@ -17,60 +17,161 @@
 
 
 body
-  background-color: #000
-  font-size: 32px
+  background-color: #eee9e6
+  font-size: 34px
 
 .stage
-  width: 14em
-  height: 10em
-  margin: 100px auto
+  width: 100%
+  height: 700px
+  
   position: relative
   +perspective(1600px)
   +perspective-origin(50% -240px)
+  +background(linear-gradient(top, #131c2d, #131c2d 40%, #b1b5b8 40%, #eee9e6))
 
 .positioning
-  +transform(rotateY(-20deg))
+  +transform(rotateY(-10deg))
   +transform-style(preserve-3d)
+  /* +animation(back-and-forth 4s ease-out infinite)
 
 /* 13.6 x 9.6 x 10.9
 
 .mac
   width: 14em
   height: 10em
+  margin: 0 auto
 
   figure
     display: block
-    background-color: beige
+    top: 100px
     position: absolute
-    @include backface-visibility(hidden)
-    opacity: 0.9
+    +backface-visibility(hidden)
+    opacity: 1
 
   .front
-    height: 13.6em
+    height: 11.5em
     width: 9.6em
-    +transform(translateZ(5.45em))
+    background-color: #d9dbb6
+    +transform(rotateX(5deg) translateZ(5.44em))
+
+    .bezel-top
+      display: block
+      border-top: 0.75em solid #e8e6cc 
+      border-right: 0.5em solid transparent
+      border-left: 0.5em solid transparent
+      width: 8.6em
+      +transform(rotateX(5deg))
+
+    .bezel-left
+      display: block
+      border-top: 0.5em solid #d1d2a9 
+      border-right: 0.75em solid transparent
+      border-left: 0.75em solid transparent
+      width: 10.15em
+      +transform(rotateX(5deg) rotateZ(-90deg) translateX(-4.8em) translateY(-5.55em))
+
+    .bezel-right
+      display: block
+      border-top: 0.5em solid #d1d2a9 
+      border-right: 0.75em solid transparent
+      border-left: 0.75em solid transparent
+      width: 10.15em
+      +transform(rotateX(5deg) rotateZ(90deg) translateX(4.4em) translateY(-3.55em))
+
+    .bezel-bottom
+      display: block
+      border-top: 0.75em solid #c2c39a 
+      border-right: 0.5em solid transparent
+      border-left: 0.5em solid transparent
+      width: 8.6em
+      +transform(rotateX(5deg) rotateZ(180deg) translateY(-9.1em))
+
+    .screen-container
+      width: 7em
+      height: 4.5em
+      background: #d1d2a9
+      border-radius: 0.1em
+      padding: 0.5em
+      +transform(translate3d(0.75em, -1.5em, 0))
+
+      input
+        position: absolute
+        top: 30px
+
+      .screen
+        display: block
+        position: absolute
+        left: 0.6em
+        top: 0
+        background: #657374
+        width: 512px
+        height: 342px
+        +transform(scale(0.5) translate3d(-8.25em, -4.5em, 0))
+        border-radius: 0.7em
+        overflow: hidden
+
+      iframe
+        position: absolute
+        left: 20px
+        margin-top: 40px
+        -webkit-filter: invert(10%) hue-rotate(200deg) contrast(120%) grayscale(100%)
 
   .back
-    height: 13.6em
+    height: 11.5em
     width: 9.6em
-    +transform(translateZ(-5.45em))
+    +background(linear-gradient(top, #f2f2da, #dddebc 0.25em, #bfc096))
+    +transform(rotateX(5deg) translateZ(-5.45em) rotateY(180deg))
 
   .top
-    height: 10.9em
+    height: 10.95em
     width: 9.6em
-    +transform(rotateX(90deg) translateZ(5.45em))
+    background-color: #ebf0dc
+    +background(linear-gradient(left, #fafee7, #eaf2db 0.25em, #eaf2db 9.35em, #fafee7))
+    +transform(rotateX(5deg) rotateX(90deg) translateZ(5.45em))
 
   .left
-    height: 13.6em
+    height: 11.5em
     width: 10.9em
-    background: red
-    +transform(rotateY(-90deg) translateZ(4.15em))
+    +background(linear-gradient(top, #f2f2da, #dddebc 0.25em, #bfc096))
+    +transform(rotateX(5deg) rotateY(-90deg) translateZ(5.45em))
 
   .right
-    height: 13.6em
+    height: 11.5em
     width: 10.9em
-    background: red
-    +transform(rotateY(90deg) translateZ(4.15em))
+    +background(linear-gradient(top, #f2f2da, #dddebc 0.25em, #bfc096))
+    +transform(rotateX(5deg) rotateY(90deg) translateZ(4.14em))
 
+  .base-front
+    height: 2.1em
+    width: 9.6em
+    background: #d1d2a9
+    +transform(translateY(10.7em) translateZ(5em))
 
+  .base-back
+    height: 2.1em
+    width: 9.6em
+    background: #bdbe94
+    +transform(translateY(10.7em) translateZ(-5em) rotateY(180deg))
+
+  .base-left
+    height: 2.1em
+    width: 10em
+    background: #bfc096
+    +transform(translateY(10.7em) rotateY(-90deg) translateZ(5em))
+
+  .base-right
+    height: 2.1em
+    width: 10em
+    background: #bfc096
+    +transform(translateY(10.7em) rotateY(90deg) translateZ(4.6em))
+
+@include keyframes(back-and-forth)
+  0%
+    @include transform(rotateY(0deg))
+  25%
+    @include transform(rotateY(-40deg))
+  75%
+    @include transform(rotateY(40deg))
+  100%
+    @include transform(rotateY(0deg))
  
