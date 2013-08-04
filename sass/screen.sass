@@ -2,6 +2,9 @@
 @import compass/css3
 @import mixins
 
+/* Variables */
+$colour: #fff
+
 /* Fallback for older browsers */
 .stage
   display: none
@@ -26,13 +29,13 @@ body
   
   position: relative
   +perspective(1600px)
-  +perspective-origin(50% 240px)
+  +perspective-origin(50% 100px)
   +background(linear-gradient(top, #131c2d, #131c2d 40%, #b1b5b8 40%, #eee9e6))
 
 .positioning
-  +transform(rotateY(10deg))
+  +transform(rotateY(30deg))
   +transform-style(preserve-3d)
-  /* +animation(back-and-forth 4s ease-out infinite)
+  +animation(back-and-forth 4s ease-out infinite)
 
 /* 13.6 x 9.6 x 10.9
 
@@ -51,7 +54,7 @@ body
   .front
     height: 11.5em
     width: 9.6em
-    background-color: #d9dbb6
+    background: darken($colour, 12%)
     +transform(rotateX(5deg) translateZ(5.44em))
 
     span
@@ -59,27 +62,27 @@ body
       display: block
 
     .bezel-top
-      border-top: 0.75em solid #e8e6cc 
+      border-top: 0.75em solid darken($colour, 5%)
       border-right: 0.5em solid transparent
       border-left: 0.5em solid transparent
       width: 8.6em
 
     .bezel-left
-      border-top: 0.5em solid #d1d2a9 
+      border-top: 0.5em solid darken($colour, 15%)
       border-right: 0.75em solid transparent
       border-left: 0.75em solid transparent
       width: 10.15em
       +transform(rotateZ(-90deg) translateX(-5.6em) translateY(-5.58em))
 
     .bezel-right
-      border-top: 0.5em solid #d1d2a9 
+      border-top: 0.5em solid darken($colour, 17%)
       border-right: 0.75em solid transparent
       border-left: 0.75em solid transparent
       width: 10em
       +transform(rotateZ(90deg) translateX(5.5em) translateY(-3.62em))
 
     .bezel-bottom
-      border-top: 0.75em solid #c2c39a 
+      border-top: 0.75em solid darken($colour, 20%)
       border-right: 0.5em solid transparent
       border-left: 0.5em solid transparent
       width: 8.65em
@@ -88,7 +91,8 @@ body
     .screen-container
       width: 6.25em
       height: 4.8em
-      background: #d1d2a9
+      background: darken($colour, 24%)
+      +background(linear-gradient(top, darken($colour, 30%), darken($colour, 20%) 4%, darken($colour, 20%) 96%, darken($colour, 35%)))
       border-radius: 0.1em
       padding: 0.5em
       +transform(translate3d(1.15em, -1.5em, 0))
@@ -111,51 +115,89 @@ body
   .back
     height: 11.5em
     width: 9.6em
-    +background(linear-gradient(top, #f2f2da, #dddebc 0.25em, #bfc096))
+    +background(linear-gradient(top, darken($colour, 5%), darken($colour, 10%) 0.25em, darken($colour, 24%)))
     +transform(rotateX(5deg) translateZ(-5.45em) rotateY(180deg))
 
   .top
     height: 10.95em
     width: 9.6em
     background-color: #ebf0dc
-    +background(linear-gradient(left, #fafee7, #eaf2db 0.25em, #eaf2db 9.35em, #fafee7))
+    +background(linear-gradient(left, darken($colour, 2%), darken($colour, 15%) 0.25em, darken($colour, 15%) 9.35em, darken($colour, 2%)))
+    +background(linear-gradient(top, darken($colour, 5%), darken($colour, 15%) 0.25em, darken($colour, 30%)))
     +transform(rotateX(5deg) rotateX(90deg) translateZ(5.45em))
 
   .left
     height: 11.5em
     width: 10.9em
-    +background(linear-gradient(top, #f2f2da, #dddebc 0.25em, #bfc096))
+    +background(linear-gradient(top, darken($colour, 0%), darken($colour, 12%) 0.25em, darken($colour, 30%)))
     +transform(rotateX(5deg) rotateY(-90deg) translateZ(5.45em))
+
+    &:after
+      content: ""
+      position: absolute
+      width: 8.9em
+      height: 1em
+      top: 11.4em
+      left: 0.5em
+      +transform(rotateZ(5deg))
+      +background(linear-gradient(top, rgba(100,100,100,0.8), rgba(100,100,100,0.8) 30%, transparent 30%, transparent))
+      background-size: 2em
 
   .right
     height: 11.5em
     width: 10.9em
-    +background(linear-gradient(top, #f2f2da, #dddebc 0.25em, #bfc096))
+    +background(linear-gradient(top, darken($colour, 0%), darken($colour, 12%) 0.25em, darken($colour, 30%)))
     +transform(rotateX(5deg) rotateY(90deg) translateZ(4.14em))
+
+    &:after
+      content: ""
+      position: absolute
+      width: 8.9em
+      height: 1em
+      top: 11.4em
+      right: 0.5em
+      +transform(rotateZ(-5deg))
+      +background(linear-gradient(top, rgba(100,100,100,0.8), rgba(100,100,100,0.8) 30%, transparent 30%, transparent))
+      background-size: 2em
 
   .base-front
     height: 2.1em
     width: 9.6em
-    background: #d1d2a9
+    background: darken($colour, 24%)
     +transform(translateY(10.7em) translateZ(5em))
+
+    &:after
+      content: ""
+      display: block
+      width: 0.4em
+      height: 0.5em
+      position: absolute
+      top: 0.9em
+      right: 1em
+      background: #555
+      border-top: 0.1em solid darken($colour, 30%)
+      border-right: 0.2em solid darken($colour, 20%)
+      border-bottom: 0.1em solid darken($colour, 10%)
+      border-left: 0.2em solid darken($colour, 20%)
+      border-radius: 0.12em
 
   .base-back
     height: 2.1em
     width: 9.6em
-    background: #bdbe94
+    background: darken($colour, 30%)
     +transform(translateY(10.7em) translateZ(-5em) rotateY(180deg))
 
   .base-left
     height: 2.1em
     width: 10em
-    background: #bfc096
+    background: darken($colour, 30%)
     +transform(translateY(10.7em) rotateY(-90deg) translateZ(5em))
 
   .base-right
     height: 2.1em
     width: 10em
-    background: #bfc096
-    +transform(translateY(10.7em) rotateY(90deg) translateZ(4.6em))
+    background: darken($colour, 30%)
+    +transform(translateY(10.7em) rotateY(90deg) translateZ(4.58em))
 
   .logo
     +transform(translateY(5.5em) translateX(1.25em))
@@ -175,23 +217,21 @@ body
       left: 2.5em
       top: 0.6em
       width: 10em
-      font-family: "EB Garamond", "Times New Roman", Times, serif
+      font-family: "Apple Garamond", "Times New Roman", Times, serif
       font-size: 0.333em
       color: #555
       line-height: 0.8em
 
   .floppy
     height: 0.2em
-    width: 2.5em
+    width: 2.8em
     +transform(translate3d(4.8em, 5.65em, 0))
-    background: #333
-    border-top: 0.1em solid #c2c39a
-    border-right: 0.5em solid #d1d2a9
-    border-bottom: 0.1em solid #d9dbb6
-    border-left: 0.5em solid #d1d2a9
+    background: #555
+    border-top: 0.1em solid darken($colour, 20%)
+    border-right: 0.3em solid darken($colour, 10%)
+    border-bottom: 0.1em solid darken($colour, 5%)
+    border-left: 0.3em solid darken($colour, 10%)
     border-radius: 0.25em
- 
-
 
 
 @include keyframes(back-and-forth)
