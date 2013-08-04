@@ -1,36 +1,108 @@
 <html>
-	<head>
-		<title>Basic screen experiment</title>
-		<style>
-			body {
-				background: beige;
-			}
-			.scene {
-				width: 512px;
-				margin: 50px auto;
-				position: relative;
-			}
-			form {
-				position: absolute;
-				top: -25px;
-			}
-			input[type=text] {
-				width: 462px;
-			}
-			input[type=submit] {
-				width: 40px;
-				margin-left: 10px;
-			}
-			iframe {
-				-webkit-filter: invert(10%) hue-rotate(200deg) contrast(120%) grayscale(100%);
-				border: 2px solid #aaa;
-			}
-		</style>
-	</head>
-	<body>
-		<div class="scene">
-			<form onsubmit="document.getElementById('screen').src = document.getElementById('src').value;return false"><input type="text" id="src" value="http://"><input type="submit" value="Go" /></form>
-			<iframe src="http://adobe.com/inspire" id="screen" width="512" height="342" style=""></iframe>
-		</div>
-	</body>
+  <head>
+    <title>Mac Plus</title>
+    <link href="stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" />
+    <script src="js/modernizr.js"></script>
+  </head>
+  <body>
+    <div class="fallback-stage"></div>
+    <div class="stage">
+      <div class="positioning three">
+        <div class="mac">
+          <figure class="back"></figure>
+          <figure class="left"></figure>
+          <figure class="right"></figure>
+          <figure class="top"></figure>
+          <figure class="base-front">
+            <span class="keyboard-port"></span>
+          </figure>
+          <figure class="base-left"></figure>
+          <figure class="base-right"></figure>
+          <figure class="base-back"></figure>
+          <figure class="front">
+            <span class="bezel-top"></span>
+            <span class="bezel-left"></span>
+            <span class="bezel-right"></span>
+            <span class="bezel-bottom"></span>
+            <figure class="screen-container">
+              <span class="screen">
+                <img src="./images/bg/hello.png">
+              </span>
+            </figure>
+            <figure class="logo">
+              <span class="image"></span>
+              <span class="text">Macintosh Plus</span>
+            </figure>
+            <figure class="floppy"></figure>
+          </figure>
+          <figure class="shadow"></figure>
+        </div>
+      </div>
+
+      <div class="positioning two">
+        <div class="mac">
+          <figure class="back"></figure>
+          <figure class="left"></figure>
+          <figure class="right"></figure>
+          <figure class="top"></figure>
+          <figure class="base-front">
+            <span class="keyboard-port"></span>
+          </figure>
+          <figure class="base-left"></figure>
+          <figure class="base-right"></figure>
+          <figure class="base-back"></figure>
+          <figure class="front">
+            <span class="bezel-top"></span>
+            <span class="bezel-left"></span>
+            <span class="bezel-right"></span>
+            <span class="bezel-bottom"></span>
+            <figure class="screen-container">
+              <span class="screen">
+                <img src="./images/bg/hello.png">
+              </span>
+            </figure>
+            <figure class="logo">
+              <span class="image"></span>
+              <span class="text">Macintosh Plus</span>
+            </figure>
+            <figure class="floppy"></figure>
+          </figure>
+          <figure class="shadow"></figure>
+        </div>
+      </div>
+
+      <div class="positioning">
+        <div class="mac">
+          <figure class="back"></figure>
+          <figure class="left"></figure>
+          <figure class="right"></figure>
+          <figure class="top"></figure>
+          <figure class="base-front">
+            <span class="keyboard-port"></span>
+          </figure>
+          <figure class="base-left"></figure>
+          <figure class="base-right"></figure>
+          <figure class="base-back"></figure>
+          <figure class="front">
+            <span class="bezel-top"></span>
+            <span class="bezel-left"></span>
+            <span class="bezel-right"></span>
+            <span class="bezel-bottom"></span>
+            <figure class="screen-container">
+              <span class="screen">
+                <img src="./images/bg/hello.png">
+              </span>
+            </figure>
+            <figure class="logo">
+              <span class="image"></span>
+              <span class="text">Macintosh Plus</span>
+            </figure>
+            <figure class="floppy"></figure>
+          </figure>
+          <figure class="shadow"></figure>
+        </div>
+      </div>
+
+    </div>
+  </body>
 </html>

@@ -33,20 +33,32 @@ body
   +background(linear-gradient(top, #131c2d, #131c2d 40%, #b1b5b8 40%, #eee9e6))
 
 .positioning
-  +transform(rotateY(30deg))
+  position: absolute
+  width: 9em
+  top: 3em
+  left: 50%
+  margin-left: -4.5em
   +transform-style(preserve-3d)
-  +animation(back-and-forth 4s ease-out infinite)
+
+  &.animated
+    +animation(back-and-forth 4s ease-out infinite)
+
+  &.two
+    +transform(translateX(14em) translateZ(-10em) rotateY(20deg))
+
+  &.three
+    +transform(translateX(-14em) translateZ(-10em) rotateY(-20deg))
 
 /* 13.6 x 9.6 x 10.9
 
 .mac
-  width: 14em
+  width: 12em
   height: 10em
   margin: 0 auto
+  +transform-style(preserve-3d)
 
   figure
     display: block
-    top: 100px
     position: absolute
     +backface-visibility(hidden)
     opacity: 1
@@ -95,7 +107,7 @@ body
       +background(linear-gradient(top, darken($colour, 30%), darken($colour, 20%) 4%, darken($colour, 20%) 96%, darken($colour, 35%)))
       border-radius: 0.1em
       padding: 0.5em
-      +transform(translate3d(1.15em, -1.5em, 0))
+      +transform(translate3d(1.15em, 1.5em, 0))
 
       .screen
         display: block
@@ -130,7 +142,7 @@ body
     height: 11.5em
     width: 10.9em
     +background(linear-gradient(top, darken($colour, 0%), darken($colour, 12%) 0.25em, darken($colour, 30%)))
-    +transform(rotateX(5deg) rotateY(-90deg) translateZ(5.45em))
+    +transform(rotateX(5deg) rotateY(-90deg) translateZ(5.48em))
 
     &:after
       content: ""
@@ -200,7 +212,7 @@ body
     +transform(translateY(10.7em) rotateY(90deg) translateZ(4.58em))
 
   .logo
-    +transform(translateY(5.5em) translateX(1.25em))
+    +transform(translateY(8.75em) translateX(1.25em))
 
     span.image
       display: block
@@ -217,7 +229,7 @@ body
       left: 2.5em
       top: 0.6em
       width: 10em
-      font-family: "Apple Garamond", "Times New Roman", Times, serif
+      font-family: apple_garamondregular, "Garamond", "Times New Roman", Times, serif
       font-size: 0.333em
       color: #555
       line-height: 0.8em
@@ -225,13 +237,20 @@ body
   .floppy
     height: 0.2em
     width: 2.8em
-    +transform(translate3d(4.8em, 5.65em, 0))
+    +transform(translate3d(4.8em, 8.9em, 0))
     background: #555
     border-top: 0.1em solid darken($colour, 20%)
     border-right: 0.3em solid darken($colour, 10%)
     border-bottom: 0.1em solid darken($colour, 5%)
     border-left: 0.3em solid darken($colour, 10%)
     border-radius: 0.25em
+
+  .shadow
+    width: 10em
+    height: 11em
+    background: transparent
+    +transform(rotateX(90deg) translateZ(-7.4em) translateX(20em))
+    +box-shadow(-20.2em 0 1.8em rgba(100,90,100,0.4))
 
 
 @include keyframes(back-and-forth)
@@ -243,4 +262,11 @@ body
     @include transform(rotateY(40deg))
   100%
     @include transform(rotateY(0deg))
+
+@font-face
+  font-family: 'apple_garamondregular'
+  src: url('../fonts/apple_garamond-webfont.eot')
+  src: url('../fonts/apple_garamond-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/apple_garamond-webfont.woff') format('woff'), url('../fonts/apple_garamond-webfont.ttf') format('truetype'), url('../fonts/apple_garamond-webfont.svg#apple_garamondregular') format('svg')
+  font-weight: normal
+  font-style: normal
  
