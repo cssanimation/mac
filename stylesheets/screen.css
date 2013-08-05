@@ -126,7 +126,7 @@ body {
   -ms-transform-style: preserve-3d;
   -o-transform-style: preserve-3d;
   transform-style: preserve-3d; }
-  .mac figure {
+  .mac figure, .mac span {
     display: block;
     position: absolute;
     -webkit-backface-visibility: hidden;
@@ -139,14 +139,11 @@ body {
     height: 11.5em;
     width: 9.6em;
     background: #e0e0e0;
-    -webkit-transform: rotateX(5deg) translateZ(5.44em);
-    -moz-transform: rotateX(5deg) translateZ(5.44em);
-    -ms-transform: rotateX(5deg) translateZ(5.44em);
-    -o-transform: rotateX(5deg) translateZ(5.44em);
-    transform: rotateX(5deg) translateZ(5.44em); }
-    .mac .front span {
-      position: absolute;
-      display: block; }
+    -webkit-transform: rotateX(5deg) translateZ(5.43em);
+    -moz-transform: rotateX(5deg) translateZ(5.43em);
+    -ms-transform: rotateX(5deg) translateZ(5.43em);
+    -o-transform: rotateX(5deg) translateZ(5.43em);
+    transform: rotateX(5deg) translateZ(5.43em); }
     .mac .front .bezel-top {
       border-top: 0.75em solid #f2f2f2;
       border-right: 0.5em solid transparent;
@@ -156,12 +153,12 @@ body {
       border-top: 0.5em solid #d9d9d9;
       border-right: 0.75em solid transparent;
       border-left: 0.75em solid transparent;
-      width: 10.15em;
-      -webkit-transform: rotateZ(-90deg) translateX(-5.6em) translateY(-5.58em);
-      -moz-transform: rotateZ(-90deg) translateX(-5.6em) translateY(-5.58em);
-      -ms-transform: rotateZ(-90deg) translateX(-5.6em) translateY(-5.58em);
-      -o-transform: rotateZ(-90deg) translateX(-5.6em) translateY(-5.58em);
-      transform: rotateZ(-90deg) translateX(-5.6em) translateY(-5.58em); }
+      width: 10em;
+      -webkit-transform: rotateZ(-90deg) translateX(-5.5em) translateY(-5.5em);
+      -moz-transform: rotateZ(-90deg) translateX(-5.5em) translateY(-5.5em);
+      -ms-transform: rotateZ(-90deg) translateX(-5.5em) translateY(-5.5em);
+      -o-transform: rotateZ(-90deg) translateX(-5.5em) translateY(-5.5em);
+      transform: rotateZ(-90deg) translateX(-5.5em) translateY(-5.5em); }
     .mac .front .bezel-right {
       border-top: 0.5em solid #d4d4d4;
       border-right: 0.75em solid transparent;
@@ -264,11 +261,11 @@ body {
     background: -moz-linear-gradient(top, #ffffff, #e0e0e0 0.25em, #b3b3b3);
     background: -o-linear-gradient(top, #ffffff, #e0e0e0 0.25em, #b3b3b3);
     background: linear-gradient(top, #ffffff, #e0e0e0 0.25em, #b3b3b3);
-    -webkit-transform: rotateX(5deg) rotateY(-90deg) translateZ(5.48em);
-    -moz-transform: rotateX(5deg) rotateY(-90deg) translateZ(5.48em);
-    -ms-transform: rotateX(5deg) rotateY(-90deg) translateZ(5.48em);
-    -o-transform: rotateX(5deg) rotateY(-90deg) translateZ(5.48em);
-    transform: rotateX(5deg) rotateY(-90deg) translateZ(5.48em); }
+    -webkit-transform: rotateX(5deg) rotateY(-90deg) translateZ(5.45em);
+    -moz-transform: rotateX(5deg) rotateY(-90deg) translateZ(5.45em);
+    -ms-transform: rotateX(5deg) rotateY(-90deg) translateZ(5.45em);
+    -o-transform: rotateX(5deg) rotateY(-90deg) translateZ(5.45em);
+    transform: rotateX(5deg) rotateY(-90deg) translateZ(5.45em); }
     .mac .left:after {
       content: "";
       position: absolute;
@@ -354,11 +351,11 @@ body {
     height: 2.1em;
     width: 10em;
     background: #b3b3b3;
-    -webkit-transform: translateY(10.7em) rotateY(-90deg) translateZ(5em);
-    -moz-transform: translateY(10.7em) rotateY(-90deg) translateZ(5em);
-    -ms-transform: translateY(10.7em) rotateY(-90deg) translateZ(5em);
-    -o-transform: translateY(10.7em) rotateY(-90deg) translateZ(5em);
-    transform: translateY(10.7em) rotateY(-90deg) translateZ(5em); }
+    -webkit-transform: translateY(10.7em) rotateY(-90deg) translateZ(4.99em);
+    -moz-transform: translateY(10.7em) rotateY(-90deg) translateZ(4.99em);
+    -ms-transform: translateY(10.7em) rotateY(-90deg) translateZ(4.99em);
+    -o-transform: translateY(10.7em) rotateY(-90deg) translateZ(4.99em);
+    transform: translateY(10.7em) rotateY(-90deg) translateZ(4.99em); }
   .mac .base-right {
     height: 2.1em;
     width: 10em;

@@ -57,7 +57,7 @@ body
   margin: 0 auto
   +transform-style(preserve-3d)
 
-  figure
+  figure, span
     display: block
     position: absolute
     +backface-visibility(hidden)
@@ -67,11 +67,7 @@ body
     height: 11.5em
     width: 9.6em
     background: darken($colour, 12%)
-    +transform(rotateX(5deg) translateZ(5.44em))
-
-    span
-      position: absolute
-      display: block
+    +transform(rotateX(5deg) translateZ(5.43em))
 
     .bezel-top
       border-top: 0.75em solid darken($colour, 5%)
@@ -83,8 +79,8 @@ body
       border-top: 0.5em solid darken($colour, 15%)
       border-right: 0.75em solid transparent
       border-left: 0.75em solid transparent
-      width: 10.15em
-      +transform(rotateZ(-90deg) translateX(-5.6em) translateY(-5.58em))
+      width: 10em
+      +transform(rotateZ(-90deg) translateX(-5.5em) translateY(-5.5em))
 
     .bezel-right
       border-top: 0.5em solid darken($colour, 17%)
@@ -152,7 +148,7 @@ body
     height: 11.5em
     width: 10.9em
     +background(linear-gradient(top, darken($colour, 0%), darken($colour, 12%) 0.25em, darken($colour, 30%)))
-    +transform(rotateX(5deg) rotateY(-90deg) translateZ(5.48em))
+    +transform(rotateX(5deg) rotateY(-90deg) translateZ(5.45em))
 
     &:after
       content: ""
@@ -213,7 +209,7 @@ body
     height: 2.1em
     width: 10em
     background: darken($colour, 30%)
-    +transform(translateY(10.7em) rotateY(-90deg) translateZ(5em))
+    +transform(translateY(10.7em) rotateY(-90deg) translateZ(4.99em))
 
   .base-right
     height: 2.1em
