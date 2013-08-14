@@ -80,26 +80,26 @@ body {
   font-size: 34px;
 }
 
-.stage {
-  width: 100%;
-  height: 700px;
-  position: relative;
-  -webkit-perspective: 1600px;
-  -moz-perspective: 1600px;
-  -ms-perspective: 1600px;
-  -o-perspective: 1600px;
-  perspective: 1600px;
-  -webkit-perspective-origin: 50% 100px;
-  -moz-perspective-origin: 50% 100px;
-  -ms-perspective-origin: 50% 100px;
-  -o-perspective-origin: 50% 100px;
-  perspective-origin: 50% 100px;
-  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #131c2d), color-stop(40%, #131c2d), color-stop(40%, #b1b5b8), color-stop(100%, #eee9e6));
-  background: -webkit-linear-gradient(top, #131c2d, #131c2d 40%, #b1b5b8 40%, #eee9e6);
-  background: -moz-linear-gradient(top, #131c2d, #131c2d 40%, #b1b5b8 40%, #eee9e6);
-  background: -o-linear-gradient(top, #131c2d, #131c2d 40%, #b1b5b8 40%, #eee9e6);
-  background: linear-gradient(top, #131c2d, #131c2d 40%, #b1b5b8 40%, #eee9e6);
-}
+    .stage {
+      width: 100%;
+      height: 700px;
+      position: relative;
+      -webkit-perspective: 1600px;
+      -moz-perspective: 1600px;
+      -ms-perspective: 1600px;
+      -o-perspective: 1600px;
+      perspective: 1600px;
+      -webkit-perspective-origin: 50% 100px;
+      -moz-perspective-origin: 50% 100px;
+      -ms-perspective-origin: 50% 100px;
+      -o-perspective-origin: 50% 100px;
+      perspective-origin: 50% 100px;
+      background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #131c2d), color-stop(40%, #131c2d), color-stop(40%, #b1b5b8), color-stop(100%, #eee9e6));
+      background: -webkit-linear-gradient(top, #131c2d, #131c2d 40%, #b1b5b8 40%, #eee9e6);
+      background: -moz-linear-gradient(top, #131c2d, #131c2d 40%, #b1b5b8 40%, #eee9e6);
+      background: -o-linear-gradient(top, #131c2d, #131c2d 40%, #b1b5b8 40%, #eee9e6);
+      background: linear-gradient(top, #131c2d, #131c2d 40%, #b1b5b8 40%, #eee9e6);
+    }
 
 .positioning {
   position: absolute;
@@ -339,6 +339,9 @@ body {
   background: linear-gradient(top, rgba(100, 100, 100, 0.8), rgba(100, 100, 100, 0.8) 30%, transparent 30%, transparent);
   background-size: 2em;
 }
+.nopseudo .mac .left:after {
+  display: none;
+}
 .mac .right {
   height: 11.5em;
   width: 10.9em;
@@ -372,6 +375,9 @@ body {
   background: linear-gradient(top, rgba(100, 100, 100, 0.8), rgba(100, 100, 100, 0.8) 30%, transparent 30%, transparent);
   background-size: 2em;
 }
+.nopseudo .mac .right:after {
+  display: none;
+}
 .mac .base-front {
   height: 2.1em;
   width: 9.6em;
@@ -396,6 +402,9 @@ body {
   border-bottom: 0.1em solid #e6e6e6;
   border-left: 0.2em solid #cccccc;
   border-radius: 0.12em;
+}
+.mac .base-front:after {
+  display: none;
 }
 .mac .base-back {
   height: 2.1em;

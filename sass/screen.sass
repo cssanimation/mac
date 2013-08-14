@@ -44,10 +44,10 @@ body
     +animation(back-and-forth 14s ease-in-out infinite)
 
   &.two
-    +transform(translateX(14em) translateZ(-10em) rotateY(20deg))
+    +transform(translateX(14em) translateZ(-10em) rotateY(30deg))
 
   &.three
-    +transform(translateX(-14em) translateZ(-10em) rotateY(-20deg))
+    +transform(translateX(-14em) translateZ(-10em) rotateY(10deg))
 
 /* 13.6 x 9.6 x 10.9
 
@@ -56,6 +56,7 @@ body
   height: 10em
   margin: 0 auto
   +transform-style(preserve-3d)
+  +transform(rotateY(-20deg))
 
   figure, span
     display: block
@@ -121,6 +122,18 @@ body
           width: 100%
           height: 100%
           border-radius: 0.1em
+
+        p
+          color: #00c317
+          font-family: monospace, prestige 
+          font-size: 0.4em
+
+          &:before
+            content: "> "
+
+          &:after
+            content: " |"
+            +animation(flash 1.5s infinite linear)
 
       .sheen
         display: block
@@ -259,13 +272,21 @@ body
     +box-shadow(-20.2em 0 1.8em rgba(100,90,100,0.4))
 
 
-@include keyframes(back-and-forth)
++keyframes(back-and-forth)
   0%
     @include transform(rotateY(40deg))
   40%, 50%
     @include transform(rotateY(-40deg))
   90%, 100%
     @include transform(rotateY(40deg))
+
++keyframes(flash)
+  0%
+    opacity: 0
+  49.9%
+    opacity: 0
+  50%, 100%
+    opacity: 1
 
 @font-face
   font-family: 'apple_garamondregular'
