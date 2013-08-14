@@ -1,106 +1,29 @@
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed,
-figure, figcaption, footer, header, hgroup,
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font: inherit;
-  font-size: 100%;
-  vertical-align: baseline;
-}
 
-html {
-  line-height: 1;
-}
 
-ol, ul {
-  list-style: none;
-}
+/* Boxes example */
 
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
-}
-
-caption, th, td {
-  text-align: left;
-  font-weight: normal;
-  vertical-align: middle;
-}
-
-q, blockquote {
-  quotes: none;
-}
-q:before, q:after, blockquote:before, blockquote:after {
-  content: "";
-  content: none;
-}
-
-a img {
-  border: none;
-}
-
-article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
-  display: block;
-}
-
-/* Mixins to extend what Compass provides */
-/* Variables */
-/* Fallback for older browsers */
 .stage {
-  display: none;
-}
-
-.csstransforms3d .stage {
-  display: block;
-}
-
-.fallback-stage {
   width: 100%;
-  height: 600px;
-  background: url(../images/fallback.png) no-repeat center;
+  height: 700px;
+  position: relative;
+  -webkit-perspective: 1600px;
+  -moz-perspective: 1600px;
+  -ms-perspective: 1600px;
+  -o-perspective: 1600px;
+  perspective: 1600px;
+  -webkit-perspective-origin: 50% 100px;
+  -moz-perspective-origin: 50% 100px;
+  -ms-perspective-origin: 50% 100px;
+  -o-perspective-origin: 50% 100px;
+  perspective-origin: 50% 100px;
+  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #131c2d), color-stop(40%, #131c2d), color-stop(40%, #b1b5b8), color-stop(100%, #eee9e6));
+  background: -webkit-linear-gradient(top, #131c2d, #131c2d 40%, #b1b5b8 40%, #eee9e6);
+  background: -moz-linear-gradient(top, #131c2d, #131c2d 40%, #b1b5b8 40%, #eee9e6);
+  background: -o-linear-gradient(top, #131c2d, #131c2d 40%, #b1b5b8 40%, #eee9e6);
+  background: linear-gradient(top, #131c2d, #131c2d 40%, #b1b5b8 40%, #eee9e6);
 }
 
-.csstransforms3d .fallback-stage {
-  display: none;
-}
-
-body {
-  background-color: #eee9e6;
-  font-size: 34px;
-}
-
-    .stage {
-      width: 100%;
-      height: 700px;
-      position: relative;
-      -webkit-perspective: 1600px;
-      -moz-perspective: 1600px;
-      -ms-perspective: 1600px;
-      -o-perspective: 1600px;
-      perspective: 1600px;
-      -webkit-perspective-origin: 50% 100px;
-      -moz-perspective-origin: 50% 100px;
-      -ms-perspective-origin: 50% 100px;
-      -o-perspective-origin: 50% 100px;
-      perspective-origin: 50% 100px;
-      background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #131c2d), color-stop(40%, #131c2d), color-stop(40%, #b1b5b8), color-stop(100%, #eee9e6));
-      background: -webkit-linear-gradient(top, #131c2d, #131c2d 40%, #b1b5b8 40%, #eee9e6);
-      background: -moz-linear-gradient(top, #131c2d, #131c2d 40%, #b1b5b8 40%, #eee9e6);
-      background: -o-linear-gradient(top, #131c2d, #131c2d 40%, #b1b5b8 40%, #eee9e6);
-      background: linear-gradient(top, #131c2d, #131c2d 40%, #b1b5b8 40%, #eee9e6);
-    }
-
+/* This positioning div added to help place the computer on the screen */
 .positioning {
   position: absolute;
   width: 9em;
@@ -120,22 +43,8 @@ body {
   -ms-animation: back-and-forth 14s ease-in-out infinite;
   animation: back-and-forth 14s ease-in-out infinite;
 }
-.positioning.two {
-  -webkit-transform: translateX(14em) translateZ(-10em) rotateY(30deg);
-  -moz-transform: translateX(14em) translateZ(-10em) rotateY(30deg);
-  -ms-transform: translateX(14em) translateZ(-10em) rotateY(30deg);
-  -o-transform: translateX(14em) translateZ(-10em) rotateY(30deg);
-  transform: translateX(14em) translateZ(-10em) rotateY(30deg);
-}
-.positioning.three {
-  -webkit-transform: translateX(-14em) translateZ(-10em) rotateY(10deg);
-  -moz-transform: translateX(-14em) translateZ(-10em) rotateY(10deg);
-  -ms-transform: translateX(-14em) translateZ(-10em) rotateY(10deg);
-  -o-transform: translateX(-14em) translateZ(-10em) rotateY(10deg);
-  transform: translateX(-14em) translateZ(-10em) rotateY(10deg);
-}
 
-/* 13.6 x 9.6 x 10.9 */
+
 .mac {
   width: 12em;
   height: 10em;
@@ -490,6 +399,73 @@ body {
   -webkit-box-shadow: -20.2em 0 1.8em rgba(100, 90, 100, 0.4);
   -moz-box-shadow: -20.2em 0 1.8em rgba(100, 90, 100, 0.4);
   box-shadow: -20.2em 0 1.8em rgba(100, 90, 100, 0.4);
+}
+
+
+
+
+
+/* Other style stuff - not relevant to this example */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+html {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+q, blockquote {
+  quotes: none;
+}
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+a img {
+  border: none;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
+  display: block;
+}
+
+body {
+  background-color: #eee9e6;
+  font-size: 34px;
 }
 
 @-moz-keyframes back-and-forth {

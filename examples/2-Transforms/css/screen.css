@@ -1,0 +1,334 @@
+
+
+/* Transforms example */
+
+.front {
+  height: 11.5em;
+  width: 9.6em;
+  background: #e0e0e0;
+  -webkit-transform: translateZ(5.43em);
+  -moz-transform: translateZ(5.43em);
+  -ms-transform: translateZ(5.43em);
+  -o-transform: translateZ(5.43em);
+  transform: translateZ(5.43em);
+}
+
+.back {
+  height: 11.5em;
+  width: 9.6em;
+  background: #aaa;
+  -webkit-transform: translateZ(-5.45em) rotateY(180deg);
+  -moz-transform: translateZ(-5.45em) rotateY(180deg);
+  -ms-transform: translateZ(-5.45em) rotateY(180deg);
+  -o-transform: translateZ(-5.45em) rotateY(180deg);
+  transform: translateZ(-5.45em) rotateY(180deg);
+}
+
+
+
+/* Other style stuff - not relevant to this example */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+html {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+q, blockquote {
+  quotes: none;
+}
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+a img {
+  border: none;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
+  display: block;
+}
+
+body {
+  background-color: #eee9e6;
+  font-size: 34px;
+}
+
+figure {
+  text-align: center;
+  font-size: 30px;
+  font-family: Helvetica, Arial, Sans-serif;
+  color: #777;
+  line-height: 10em;
+}
+
+.stage {
+  width: 100%;
+  height: 700px;
+  position: relative;
+  -webkit-perspective: 1600px;
+  -moz-perspective: 1600px;
+  -ms-perspective: 1600px;
+  -o-perspective: 1600px;
+  perspective: 1600px;
+  -webkit-perspective-origin: 50% -100px;
+  -moz-perspective-origin: 50% -100px;
+  -ms-perspective-origin: 50% -100px;
+  -o-perspective-origin: 50% -100px;
+  perspective-origin: 50% -100px;
+  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #131c2d), color-stop(40%, #131c2d), color-stop(40%, #b1b5b8), color-stop(100%, #eee9e6));
+  background: -webkit-linear-gradient(top, #131c2d, #131c2d 40%, #b1b5b8 40%, #eee9e6);
+  background: -moz-linear-gradient(top, #131c2d, #131c2d 40%, #b1b5b8 40%, #eee9e6);
+  background: -o-linear-gradient(top, #131c2d, #131c2d 40%, #b1b5b8 40%, #eee9e6);
+  background: linear-gradient(top, #131c2d, #131c2d 40%, #b1b5b8 40%, #eee9e6);
+}
+
+.positioning {
+  position: absolute;
+  width: 9em;
+  top: 3em;
+  left: 50%;
+  margin-left: -4.5em;
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  -ms-transform-style: preserve-3d;
+  -o-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+}
+.positioning.animated {
+  -webkit-animation: back-and-forth 14s ease-in-out infinite;
+  -moz-animation: back-and-forth 14s ease-in-out infinite;
+  -o-animation: back-and-forth 14s ease-in-out infinite;
+  -ms-animation: back-and-forth 14s ease-in-out infinite;
+  animation: back-and-forth 14s ease-in-out infinite;
+}
+
+/* 13.6 x 9.6 x 10.9 */
+.mac {
+  width: 12em;
+  height: 10em;
+  margin: 0 auto;
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  -ms-transform-style: preserve-3d;
+  -o-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  -webkit-transform: rotateY(-20deg);
+  -moz-transform: rotateY(-20deg);
+  -ms-transform: rotateY(-20deg);
+  -o-transform: rotateY(-20deg);
+  transform: rotateY(-20deg);
+}
+.mac figure, .mac span {
+  display: block;
+  position: absolute;
+  opacity: 1;
+}
+
+
+@-moz-keyframes back-and-forth {
+  0% {
+    -moz-transform: rotateY(40deg);
+    transform: rotateY(40deg);
+  }
+
+  40%, 50% {
+    -moz-transform: rotateY(-40deg);
+    transform: rotateY(-40deg);
+  }
+
+  90%, 100% {
+    -moz-transform: rotateY(40deg);
+    transform: rotateY(40deg);
+  }
+}
+
+@-webkit-keyframes back-and-forth {
+  0% {
+    -webkit-transform: rotateY(40deg);
+    transform: rotateY(40deg);
+  }
+
+  40%, 50% {
+    -webkit-transform: rotateY(-40deg);
+    transform: rotateY(-40deg);
+  }
+
+  90%, 100% {
+    -webkit-transform: rotateY(40deg);
+    transform: rotateY(40deg);
+  }
+}
+
+@-o-keyframes back-and-forth {
+  0% {
+    -o-transform: rotateY(40deg);
+    transform: rotateY(40deg);
+  }
+
+  40%, 50% {
+    -o-transform: rotateY(-40deg);
+    transform: rotateY(-40deg);
+  }
+
+  90%, 100% {
+    -o-transform: rotateY(40deg);
+    transform: rotateY(40deg);
+  }
+}
+
+@-ms-keyframes back-and-forth {
+  0% {
+    -ms-transform: rotateY(40deg);
+    transform: rotateY(40deg);
+  }
+
+  40%, 50% {
+    -ms-transform: rotateY(-40deg);
+    transform: rotateY(-40deg);
+  }
+
+  90%, 100% {
+    -ms-transform: rotateY(40deg);
+    transform: rotateY(40deg);
+  }
+}
+
+@keyframes back-and-forth {
+  0% {
+    -webkit-transform: rotateY(40deg);
+    -moz-transform: rotateY(40deg);
+    -ms-transform: rotateY(40deg);
+    -o-transform: rotateY(40deg);
+    transform: rotateY(40deg);
+  }
+
+  40%, 50% {
+    -webkit-transform: rotateY(-40deg);
+    -moz-transform: rotateY(-40deg);
+    -ms-transform: rotateY(-40deg);
+    -o-transform: rotateY(-40deg);
+    transform: rotateY(-40deg);
+  }
+
+  90%, 100% {
+    -webkit-transform: rotateY(40deg);
+    -moz-transform: rotateY(40deg);
+    -ms-transform: rotateY(40deg);
+    -o-transform: rotateY(40deg);
+    transform: rotateY(40deg);
+  }
+}
+
+@-moz-keyframes flash {
+  0% {
+    opacity: 0;
+  }
+
+  49.9% {
+    opacity: 0;
+  }
+
+  50%, 100% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes flash {
+  0% {
+    opacity: 0;
+  }
+
+  49.9% {
+    opacity: 0;
+  }
+
+  50%, 100% {
+    opacity: 1;
+  }
+}
+
+@-o-keyframes flash {
+  0% {
+    opacity: 0;
+  }
+
+  49.9% {
+    opacity: 0;
+  }
+
+  50%, 100% {
+    opacity: 1;
+  }
+}
+
+@-ms-keyframes flash {
+  0% {
+    opacity: 0;
+  }
+
+  49.9% {
+    opacity: 0;
+  }
+
+  50%, 100% {
+    opacity: 1;
+  }
+}
+
+@keyframes flash {
+  0% {
+    opacity: 0;
+  }
+
+  49.9% {
+    opacity: 0;
+  }
+
+  50%, 100% {
+    opacity: 1;
+  }
+}
+
+@font-face {
+  font-family: "apple_garamondregular";
+  src: url("../fonts/apple_garamond-webfont.eot");
+  src: url("../fonts/apple_garamond-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/apple_garamond-webfont.woff") format("woff"), url("../fonts/apple_garamond-webfont.ttf") format("truetype"), url("../fonts/apple_garamond-webfont.svg#apple_garamondregular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
